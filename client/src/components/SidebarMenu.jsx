@@ -1,16 +1,43 @@
+import { SiGoogleclassroom } from 'react-icons/si'
+import { LiaSchoolSolid } from 'react-icons/lia'
+
 const SidebarMenu = () => {
   return (
-    <section className='w-1/6 h-screen bg-black p-4'>
-      <h1 className='text-white text-center text-xl text-bold border-b-2 w-full p-4'>
-        Omair
-      </h1>
-      <ul className='mt-8'>
-        <li className='text-white text-center text-xl text-bold'>
-          <a href=''>Classes</a>
-        </li>
-        <li className='text-white text-center text-xl text-bold'>Grades</li>
-      </ul>
-    </section>
+    <div className='drawer lg:drawer-open'>
+      <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
+      <div className='drawer-content flex flex-col items-center justify-center'>
+        {/* Page content here */}
+        <label
+          htmlFor='my-drawer-2'
+          className='btn btn-primary drawer-button lg:hidden'
+        >
+          Open drawer
+        </label>
+      </div>
+      <div className='drawer-side'>
+        <label
+          htmlFor='my-drawer-2'
+          aria-label='close sidebar'
+          className='drawer-overlay'
+        ></label>
+        <ul className='menu p-4 w-80 min-h-full bg-base-200 text-base-content'>
+          {/* Sidebar content here */}
+
+          <li>
+            <a>
+              <SiGoogleclassroom className='text-xl' />
+              Classes
+            </a>
+          </li>
+          <li>
+            <a>
+              <LiaSchoolSolid className='text-xl' />
+              Assignments
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   )
 }
 
