@@ -1,1 +1,5 @@
-export default function App() {}
+import Drawer from './components/Drawer'
+
+export default function App() {
+  return <Drawer />
+}
